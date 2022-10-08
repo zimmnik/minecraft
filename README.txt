@@ -1,4 +1,4 @@
-# minecraft
+#minecraft
 private poratble vanilla minecraft server
 
 #------------------------------------------
