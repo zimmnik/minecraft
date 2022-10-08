@@ -1,3 +1,6 @@
+# minecraft
+private poratble vanilla minecraft server
+
 #------------------------------------------
 # K8S DEPLOYMENT mode
 # RESTORE
