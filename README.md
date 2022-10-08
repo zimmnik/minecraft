@@ -2,7 +2,7 @@
 ## private poratble vanilla minecraft server
 
 # Installation
-podman deployment mode
+podman manifest mode
 ### restore
 ```sh
 docker volume create minecraft-world; docker volume ls
