@@ -1,0 +1,28 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    io.kubernetes.cri-o.TTY/minecraft: "false"
+    io.podman.annotations.autoremove/minecraft: "false"
+    io.podman.annotations.init/minecraft: "false"
+    io.podman.annotations.privileged/minecraft: "false"
+    io.podman.annotations.publish-all/minecraft: "false"
+  labels:
+    app: minecraft
+  name: minecraft
+spec:
+  hostname: minecraft
+  containers:
+  - image: localhost/minecraft
+    name: server
+    ports:
+    - containerPort: 25565
+      hostPort: 25565
+    volumeMounts:
+    - mountPath: /opt/minecraft/world
+      name: minecraft-world
+  volumes:
+  - name: minecraft-world
+    persistentVolumeClaim:
+      claimName: minecraft-world
